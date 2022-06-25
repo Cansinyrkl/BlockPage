@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
 </head>
 
-<body>
+<body onload="javascript:checkCookie()">
     <div class="container">
         <header class="header">
             <h1>KENDİMCE YAPTIĞIM ÇALIŞMALAR</h1>
@@ -3319,8 +3319,509 @@
                     <h1>JS Ders 77 getElementsByName</h1>
                 </header>
                <img src="resimler/getElementsByName.PNG"/>
-                
+               <p>getElementsByName'ile birkaç örnekler</p>
+               <img src="resimler/getElementsByName.PNG"/>
+            </article>
+        </section>
+        <section class="change">
+            <article>
+                <header class="header_alt">
+                    <h1>JS Ders 78 Objects (Detaylı Anlatım)</h1>
+                </header>
+              <li>
+                Javacript'te neredeyse "her şey" bir nesnesdir.<br>
+                 Boolean nesne olabilir (new anahtar kelime ile tanımlanırsa)<br>
+                 Sayılar nesne olabilir (new anahtar kelime ile tanımlanırsa)<br>
+                 Stringler nesne olabilir (new anahtar kelime ile tanımlanırsa)<br>
+                 tarihler her zaman nesnedir<br>
+                 Matematik her zaman nesnedir.<br>
+                 Düzenli ifadeler her zaman nesnedir.<br>
+                 Arrayler her zaman nesnedir<br>
+                 Fonksiyonlar her zaman nesnedir
+              </li>
+              <li>
+                İlkel tanımlamalar dışındaki tüm Javacript değerleri nesnedir.
+              </li>
+              <h3>Javacript Primitives</h3>
+              <li>
+                İlkel bir değer, herhangi bir özelliği veya yöntem içermeyen bir değerdir.
+              </li>
+              <li>
+                İlkel bir veri türü, ilkel bir değere sahip olan veridir.
+              </li>
+              <li>
+                Javacript, ilkel veri türlerinin 5 tipini tanımlar:
+              </li>
+              <h3>
+                Object Methods
+              </h3>
+              <li>
+                Metodlar, nesneler üzerinde gerçekleştirilebilecek eylemlerdir.
+              </li>
+              <li>
+                nesne özellikleri, ilkel değerler, diğer nesneler ve fonksiyonlar olabilir.
+              </li>
+              <li>
+                Bir nesne metodu, bir fonksiyon tanımı içeren bir nesne mülküdür.
+              </li>
+              <h3>
+                Javacript Nesnesi Oluşturma 
+              </h3>
+              <li>
+                Javacript ile, kendi nesnelerinizi tanımlayabilir ve oluşturabilirisiniz.
+              </li>
+              <li>
+                Yeni nesneler oluşturmak için farklı yollar vardır:
+              </li>
+              <li>
+                Bir nesne değişmezini kullanarak tek bir nesne tanımlayın ve oluşturun.
+              </li>
+              <li>
+                New anahtar kelimesi ile tek bir nesne tanımlayın ve oluşturun.
+              </li>
+              <li>
+                Bir contructor tanımlayın ve sonra oluşturulan tür nesneleri oluşturun.
+              </li>
+              <li>
+                ECMAScript 5'te bir nesne,Object.create() fonksiyonu ile oluşturabilir.
+              </li>
+            </article>
+        </section>
+        <section class="change">
+            <article>
+                <header class="header_alt">
+                    <h1>JS Ders 79 Nesne Oluşturma Yöntemleri</h1>
+                </header>
+                <h3>
+                    Using an Object Literal
+                </h3>
+                <li>
+                    Bu, bir Javacript Nesnesinin oluşturulmasının en kolay yoludur.
+                </li>
+                <li>
+                    Bir nesne değişmezini kullanarak bir ifadede nesne tanımlar ve oluşturursunuz
+                </li>
+                <h3>
+                    Using the Javacript Keyword new
+                </h3>
+                <li>
+                    New anahtar kelimesini kullanarak bir nesne oluşturabilirsiniz.
+                </li>
+                <h3>
+                    Using an Object Constructor
+                </h3>
+                <li>
+                    Yukarıdaki örnekler pek çok durumda sınırlıdır. Sadece tek bir nesne oluştuyorlar.
+                </li>
+                <li>
+                    Bazen, bir çok nesne oluşturmak için kullanılabilen bir "nesne türü" istiyoruz.
+                </li>
+                <li>
+                    Fonksyion bir nesne yapıcısıdır.
+                </li>
+                <li>
+                    Bir nesne yapıcısına sahip olduğunuzda ,aynı türden yeni nesneler oluşturabilirisiniz
+                </li>
+                <p id="person"></p>
+                <img src="resimler/nesne oluşturma yöntemleri.PNG"/>
+            </article>
+        </section>
+        <section class="change">
+            <article>
+                <header class="header_alt">
+                    <h1>JS Ders 80 Object Özellik ve Metodları</h1>
+                </header>
+               <img src="resimler/object özellikleri ve metodları.PNG"/>
+            </article>
+        </section>
+        <section class="change">
+            <article>
+                <header class="header_alt">
+                    <h1>JS Ders 81 Object Prototypes</h1>
+                </header>
+               <li>
+                Her Javacript nesnesinin bir prototipi vardır.Prototip de bir nesnedir.
+               </li>
+               <li>
+                Tüm Javacript nesneleri özelliklerini ve metodlarını prototiplerden devralır.
+               </li>
+               <li>
+                Bir nesne değişmez kullanılarak veya new Object () ile oluşturulan nesneler, Object.prototype adlı bir prototipden devralınır.
+               </li>
+               <li>
+                ne Date() ile oluşturulan nesneler Date.prototype öğesini devralır.
+               </li>
+               <li>
+                Object.prototype prototip zincirinin üstündedir.
+               </li>
+               <li>
+                Tüm Javacript nesneleri (Date,Array,RegExp,Funciton,...),Object.prototype öğesinden devralır.
+               </li>
+               <li>
+                Javacript prototip özelliği mevcut bir prototipe yeni özellikler eklemesinize izin verir
+               </li>
+               <li>
+                Javacript prototip özelliği, mevcut bir prototipe yeni metodlar eklemenize izin verir
+               </li>
+               <li>
+                Sadece kendi prototiplerinizi değiştirin. Asla standart Javacript nesnelerinin prototiplerini değiştirmeyin.
+               </li>
+               <p id="people"></p>
+            </article>
+        </section>
+        <section class="change">
+            <article>
+                <header class="header_alt">
+                    <h1>JS Ders 82 Fonksiyonlar (Detaylı Anlatım)</h1>
+                </header>
+                <li>
+                    Javacript fonksiyonları function anahtar sözcüğüyle tanımlanır.
+                </li>
+                <li>
+                    function functionName(parameters){<br>
+                        code to be executed<br>
+                    }
+                </li>
+                <li>
+                    Bir fonksiyon ifadesi bir değişkende saklanabilir.
+                </li>
+                <li>
+                    Fonksiyonlar, ayrıca, Function()adı verilen dahili bir Javacript fonksiyon kurucusu ile tanımlanabilir.
+                </li>
+                <li>
+                    Javacript fonksiyonları bildirilmeden önce çağrılabilir
+                </li>
+                <li>
+                    Fonksiyon ifadeleri kendini çağırabilir.
+                </li>
+                <li>
+                    Javacript'deki type işleci fonksiyonlar için "function" döndürür.Ancak, Javacript fonksiyonları en iyi nesneler olarak tanımlanabilir.
+                </li>
+            </article>
+        </section>
+        <section class="change">
+            <article>
+                <header class="header_alt">
+                    <h1>JS Ders 83 Fonksiyonda Parametre Kavramı</h1>
+                </header>
+                <img src="resimler/parametre kavramı.PNG"/>
+               
+            </article>
+        </section>
+        <section class="change">
+            <article>
+                <header class="header_alt">
+                    <h1>JS Ders 84 Call ve Apply Metodları</h1>
+                </header>
+                <li>
+                    Call() metodu önceden tanımlanmış bir Javacript fonksiyon metodudur.
+                </li>
+                <li>
+                    İlk nesne argümanı (parametre) olarak bir kullanıcı nesnesini çağırmak için kullanılabilir.
+                </li>
+                <li>
+                    Apply()metodu call()metoduna benzer
+                </li>
+                <li>
+                    Tek farkı şudur:<br>
+                    -call() fonksiyonu bağımsız değişikenlerini ayrı ayrı alır<br>
+                    -apply() herhangi bir fonksiyon argümanını bir dizi olarak alır
+                </li>
+                <li>
+                    Bir argüman listesi yerine bir dizi kullanmak istiyorsanız apply() metodu çok kullanışlıdır.
+                </li>
+                <li>
+                    Bir sayı listesindeki en büyük numarayı almak isterseniz, Math.max()metodunu kullanabilirisiz.
+                </li>
+            </article>
+        </section>
+        <section class="change">
+            <article>
+                <header class="header_alt">
+                    <h1>JS Ders 85 HTML DOM (Document Object Model)</h1>
+                </header>
+                <h3>
+                    Javacript HTML DOM (Document Object Model)
+                </h3>
+                <li>
+                    HTML DOM ile Javacript bir HTML belgesinin tüm öğelerine erişebilir ve bunları değiştirebilir.
+                </li>
+                <li>
+                    Bir web sayfası yüklendiğinde, tarayıcı sayfanın bir Doküman Nesne Modelini oluşturur.
+                </li>
+                <li>
+                    Tarayıcı HTML DOM modeli ile elementleri Nesneler den oluşan bir ağaca dönüştürür
+                </li>
+                <img src="resimler/DOcumentler.PNG"/>
+                <li>
+                    Nesne modeli ile Javacript, dinamik HTML oluşturmak için ihtiyaç duyduğu gücü alır<br>
+                     -JavaScript sayfadaki tüm HTML öğelerini değiştirebilir<br>
+                     -JavaScript sayfadaki tüm HTML niteliklerini değiştirebilir<br>
+                     -JavaScript saygadaki tüm CSS Stillerini değiştirebilir<br>
+                     -JavaScript mevcut HTML öğelerini ve niteliklerini kaldırabilir<br>
+                     -JavaScript yeni HTML öğeleri ve nitelikleri ekleyebilir<br>
+                     -JavaScript sayfadaki tüm mevcut HTML olaylarına tepki gösterebilir<br>
+                     -JavaScript,saygada yeni HTML olayları oluşturabilir.
+                </li>
+                <li>
+                    DOM, bir W3C (World Wide Web COnsortium) standardıdır.
+                </li>
+                <li>
+                    DOM belgeler erğişmek için bir standart tanımlar:
+                </li>
+                <li>
+                    W3C Belge Nesnesi Modeli (DOM), programların ve komut dizilerinin bir belgenin içeriğini,
+                    yapısını ve stilini dinamik olarak erişmesini ve güncellemesini sağlayan bir platform
+                </li>
+            </article>
+        </section>
+        <section class="change">
+            <article>
+                <header class="header_alt">
+                    <h1>JS Ders 86 HTML DOM Metodları ve Document Nesnesi</h1>
+                </header>
+                <h3>
+                    Javacript HTML DOM (Document Object Model)
+                </h3>
+                <li>
+                    W3C DOM standardı, 3 farklı kısma ayrılmıştır:<br>
+                     -Çekirdek DOM- tüm belge türleri için standart model<br>
+                     -XML DOM - XML belgeleri için standart model <br>
+                     -HTML DOM - HTML belgeleri için standart model
+                </li>
+                <li>
+                    Özetle: HTML DOM, HTML öğelerini almanın, değiştirmenin, eklemenin veya silmenin standart'ıdır.
+                </li>
+                <h3>
+                    JavaScript - HTML DOM Methods
+                </h3>
+                <li>
+                    HTML DOM'a JavaScript ile (ve diğer programlama dilleriyle) erişilebilir.DOM'da,tüm HTML elementleri nesneler olarak tanımlanır
+                </li>
+                <li>
+                    Bir özellik, alabileceğiniz veya ayarlayabilceceğiniz bir değerdir(bir HTML elementinin içeriğini değiştirme gibi).
+                </li>
+                <li>
+                    Bir metod, yapabileceğiniz bir işlemdir(bir HTML elementi ekleme veya silme gibi).
+                </li>
+                <li>
+                    Bir HTML öğesine erişmenin en yaygın yolu, elementin kimliğini kullanmaktır.
+                </li>
+                <li>
+                    Bir elementin içeriğini almanın en kolay yolu innerHTML özelliğini kullanmaktır.
+                </li>
+                <li>
+                    innerHTML özelliği, HTML öğelerinin içeriğini almak veya değiştirmek için kullanışlıdır.
+                </li>
+                <h3>
+                    JavaScript HTML DOM Document
+                </h3>
+                <li>
+                    HTML DOM doküman nesnesi , web sayfanızdaki diğer tüm nesnelerin sahibidir.
+                </li>
+                <li>
+                    Doküman nesnesi, web sayfanızı temsil eder.
+                </li>
+                <li>
+                    Bir HTML sayfasındaki herhangi bir öğeye erişmek istiyorsanız, daima document nesnesine erişmekle başlarsınız
+                </li>
+                <img src="resimler/DOM nesnesi.PNG"/>
+                <img src="resimler/DOM nesnesi.1PNG.PNG"/>
+                <img src="resimler/DOM nesnesi.2PNG.PNG"/>
+                <img src="resimler/DOM nesnesi.3PNG.PNG"/>
+                <img src="resimler/DOM nesnesi.4PNG.PNG"/>
+                <img src="resimler/DOM nesnesi.5PNG.PNG"/>
+            </article>
+        </section>
+        <section class="change">
+            <article>
+                <header class="header_alt">
+                    <h1>JS Ders 87 HTML DOM ile HTML Elemanlarını Bulma</h1>
+                </header>
+                <h3>
+                    HTML Elemanlarını bulma
+                </h3>
+                <li>
+                    Genellikle Javacript ile HTML öğelerini değiştirmek istersiniz.
+                </li>
+                <li>
+                    Bunu yapmak için önce elemanları bulmanız gerekir.Bunu yapmak için bir çift yol var:
+                </li>
+                <li>
+                    HTML öğelerini kimlik numarasıyla bulma(id)<br>
+                    HTML öğelerini etiket adına göre bulma(tag name)<br>
+                    HTML öğelerini sınıf adına göre bulmak (class name)<br>
+                    CSS seçicileriyle HTML öğelerini bulma (Css selectors)
+                </li>
+                <li>
+                    Bir HTML öğesini DOM'da bulmanın en kolay yolu, elementin kimliği kullanmaktır.
+                </li>
+                <li>
+                    HTML öğelerini etiket adına göre bulmak. Bu yöntemde elementler bir dizi olarak geriye döner.
+                </li>
+                <li>
+                    Aynı sınıf adına sahip tüm HTML öğelerini bulmak isterseniz,getElementsByClassName()  kullanmalısınız
+                </li>
+                <li>
+                    Belirli bir css seçici ile eşleşen tüm HTML öğelerini bulmak istiyorsanız (id, sınıf adları, türleri, nitelikler,
+                     öznitelik değerleri vb.)QuerySelectorAll() yöntemini kullanın.
+                     (QuerySelectorAll()yöntemi, Internet Explorer 8 ve önceki sürümlerinde çalışmaz.)
+                </li>
+            </article>
+        </section>
+        <section class="change">
+            <article>
+                <header class="header_alt">
+                    <h1>JS Ders 88 HTML DOM ile Nesnelere Ulaşma</h1>
+                </header>
+               <div class="container-fluid mt-3">
+                <!-- <p id="dom"></p> -->
+                <p id="dom1"></p>
+                      <p><a href="#" name="lang1" class="page-link">Javacript</a></p>
+                      <p><a href="#" name="lang2" class="page-link">JQUERY</a></p>
+                      <p><a href="#" name="lang3" class="page-link">Angular JS</a></p>
+                      <p><a href="#" name="lang4" class="page-link">React JS</a></p>
+                      <!-- <form id="frmDOM" name="frmDOM">
+                        <div class="form-group">
+                            <label for="txt1">Value 1</label>
+                            <input type="text" name="txt1" id="txt1" value="Node" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="txt2">Value 2</label>
+                            <input type="text" name="txt2" id="txt2" value="js" class="form-control">
+                        </div>
+                      </form>
+                      <button type="button" class="btn btn-danger" onclick="javascript:getDOM()">Click</button> -->
+               </div>
+            </article>
+        </section>
+        <section class="change">
+            <article>
+                <header class="header_alt">
+                    <h1>JS Ders 89 HTML DOM ile HTML Elementlerini Değiştirme</h1>
+                </header>
+                <h3>
+                    HTML elemanlarını Değiştirme
+                </h3>
+                <li>
+                    HTML DOM, Javacript'in HTML öğelerinin içeriğini değiştirmesini sağlar.
+                </li>
+                <li> 
+                    Javacript'de documen.write() doğrudan HTML çıktısı yazmak için kullanılabilir
+                </li>
+                <li>
+                    Bir HTML öğesinin içeriğini değiştirmenin en kolay yolu innnerHTML özelliğini kullanmaktır.
+                </li>
+                <li>
+                    Bir HTML özniteliğinin değerini değiştirmekte HTML DOM sayesinde mümkün
+                </li>
+                <h3>
+                    Changing CSS
+                </h3>
+                <li>
+                    HTML DOM, Javacript'in HTML öğelerinni stilini değiştirmesini sağlar.
+                </li>
+                <h3>
+                    HTML Events
+                </h3>
+                <li>
+                    Kullanıcı sayfaya girdiğinde ya da sayfadan ayrıldığında onload ve onunload olayları tetiklenir.
+                </li>
+                <li>
+                    Onload olayı, ziyaretçinin tarayıcı türünü ve tarayıcı sürümünü kontrol etmek ve bilgiyi temel alarak web sayfasını doğru sürümünü yüklemek için kullanılabilir.
+                </li>
+                <li>
+                    Onload ve onunload olayları, cookieleri kontrol için kullanılabilir
+                </li>
+               
+            </article>
+        </section>
+        <section class="change">
+            <article>
+                <header class="header_alt">
+                    <h1>JS Ders 90 onclick olayı</h1>
+                </header>
+            <div class="container-fluid mt3">
 
+                <h2 onclick="this.innerHTML='Javascript'">Click</h2>
+                <h2 onclick="javascript:changeText(this)">Click</h2>
+            </div>
+            </article>
+        </section>
+        <section class="change">
+            <article>
+                <header class="header_alt">
+                    <h1>JS Ders 91 onLoad, onUnLoad ve onScroll Olayları</h1>
+                </header>
+                <img src="resimler/cookie.PNG"/>
+                <h3 id="cookie"></h3>
+            </article>
+        </section>
+        <section class="change">
+            <article>
+                <header class="header_alt">
+                    <h1>JS Ders 92 onChange, onMouseOver, onMouseOut Olayları</h1>
+                </header>
+                <input type="text" id="degisme" name="username" onchange="changeFunction()" class="form-control">
+                <img src="resimler/eventler.PNG" width="1000" height="200" alt="" id="picture" onmouseover="mOver(this)" onmouseout="mOut(this)"/>
+            </article>
+        </section>
+        <section class="change">
+            <article>
+                <header class="header_alt">
+                    <h1>JS Ders 93 onMouseDown, onMouseUp, onFocus, onDblClick, onMouseMove, onKeyDown, onKeyUp Olayları</h1>
+                </header>
+                <h3>HTML Events</h3>
+                <li>
+                    Onchange olayı genellikle giriş alanlarını geçerliliği ile birlikte kullanılır.
+                </li>
+                <li>
+                    Onmouseover ve onmouseout olayları,kullanıcı bir HTML öğesinin üzerine geldiğnde veya bir HTML öğesinin dışına çıktığında bir fonksiyonu tetiklemek için kullanılabilir
+                </li>
+                <li>
+                    Onmousedown, onmouseup ve onclick eventleri fare tıklamasının tüm parçalarıdır.Önce bir fare düğmesi
+                     tıklandığında onmousedown olayı tetiklenir, ardından fare düğmesi bırakıldığında onmouseup olayı tetiklenir,
+                     nihayet,fare tıklaması tamamlandığında onclick olayı tetiklenir.
+                </li>
+            </article>
+        </section>
+        <section class="change">
+            <article>
+                <header class="header_alt">
+                    <h1>JS Ders 94 EventListener</h1>
+                </header>
+                <h3>HTML DOM EventListener</h3>
+                <li>
+                    addEventListener()metodu, belirlenen elemente bir event handler(olay işleyicisi) ekler.
+                </li>
+                <li>
+                    Bir öğeye birçok event handler ekleyebilirsiniz.
+                </li>
+                <li>
+                    Yalnızca HTML öğelerini değil herhangi bir DOM nesnesine olay dinleyicisi ekleyebilirsiniz. Mesela window nesnesi
+                </li>
+                <li>
+                    addEventListener() metodunu kullanırken, Javacript daha iyi okunabilirlik sağlamak için HTML biçimlendirmesinden ayrılır
+                    ve HTML biçimlendirmesini kontrol etmediğinizde bile  olay dinleyicileri eklemenize izin verir.
+                </li>
+                <li>
+                    removeEventListener() metodunu kullanarak bir olay dinleyicisini kolayca kaldırabilirsiniz.
+                </li>
+                <li>
+                    element.addEventListener(event,function,useCapture);
+                </li>
+                <li>
+                    İlk parametre, etkinliği türüdür("click" veya "mousedown" gibi)
+                </li>
+                <li>
+                    İkinci paramtre, olay meydana geldiğinde aramak istediğimiz fonksyondur.
+                </li>
+                <li>
+                    Üçüncü parametre,olay kabarcığı veya olay yakalamayı kullanıp kullanamayacağını belirten bir boolean değeridir.Bu parametre isteğe bağlıdır.
+                </li>
+                <div id="eventListener" class="alert alert-success">Javacript ile EventListener konusu</div>
+                <button type="button" id="Btnn" class="btn btn-dark">Click</button>
+                
             </article>
         </section>
     </div>
@@ -3340,6 +3841,9 @@
         function myClick(){
             alert("Helloo.");
         }
+
+        document.getElementById('person').innerHTML= myPerson.firstName+" loves "+ myPerson2.FirstName;
+        
     </script>
         
 
