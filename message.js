@@ -157,3 +157,68 @@ function mOver() {
 function mOut() {
   document.querySelector("#EventListener").innerHTML = "Üstümden çıkdın";
 }
+
+//Eventlistener kabarcıklanma ve yakalama olayları
+
+var num1 = 7,
+  num2 = 10;
+var Btn1 = document.querySelector("#Btn1");
+var result = document.querySelector("#result1");
+Btn1.addEventListener("click", function () {
+  process(num1, num2);
+});
+
+// function process(p1, p2) {
+//   document.querySelector("#result1").innerHTML = p1 * p2;
+// }
+
+// window.addEventListener("resize", function () {
+//   this.document.querySelector("#yakala").innerHTML = Math.random();
+// });
+
+var p1, p2, Div1, Div2;
+p1 = document.querySelector("#p1");
+p2 = document.querySelector("#p2");
+Div1 = document.querySelector("#Div1");
+Div2 = document.querySelector("#Div2");
+
+p1.addEventListener(
+  "click",
+  function () {
+    alert("P1 paragrafına tıkladın");
+  },
+  false
+);
+p2.addEventListener(
+  "click",
+  function () {
+    alert("P2 paragrafına tıkladın");
+  },
+  true
+);
+Div1.addEventListener(
+  "click",
+  function () {
+    alert("Div1 paragrafına tıkladın");
+  },
+  false
+);
+Div2.addEventListener(
+  "click",
+  function () {
+    alert("Div2 paragrafına tıkladın");
+  },
+  true
+);
+
+//removeEventListener
+
+var remove = document.querySelector("#remove");
+remove.addEventListener("mousemove", rastgele, false);
+function rastgele() {
+  document.querySelector("#paragraf").innerText = Math.random();
+}
+var btn01 = document.querySelector("#btn01");
+btn01.onclick = function () {
+  remove.removeEventListener("mousemove", rastgele);
+};

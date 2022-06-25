@@ -3821,7 +3821,82 @@
                 </li>
                 <div id="eventListener" class="alert alert-success">Javacript ile EventListener konusu</div>
                 <button type="button" id="Btnn" class="btn btn-dark">Click</button>
+            </article>
+        </section>
+        <section class="change">
+            <article>
+                <header class="header_alt">
+                    <h1>JS Ders 95 EventListener Kabarcıklanma ve Yakalama Olayları</h1>
+                </header>
+                <h3>HTML DOM EventListener</h3>
+                <li>
+                    addEventListener()metodu varolan olayların üzerine yazılmadan aynı öğeye birçok olay eklemenize izin verir
+                </li>
+                <li>
+                    Aynı elemente farklı türdeki olayları ekleyebilirsiniz.
+                </li>
+                <li>
+                    addEventListener()metodu, HTML öğeleri, HTML belgesi, window nesnesi veya olayları destekleyen xmlHttpRequest nesnesi
+                    gibi herhangi bir HTML DOM nesnesine olay dinleyicileri eklemenize izin verir.
+                </li>
+                <li>
+                    Olaylar iki aşamalı olarak ele alınır:yakalama ve kabarcıklanma. Yakalama aşaması sırasında olaylar,nesne hiyerarşisinde daha
+                    düşük olan olay hedeflerine gönderilmeden önce üst nesnelere gönderilir.Kabarcıklanma aşamasında,ilk önce hedef öğelere ve
+                    daha sonra üst öğelere olaylar gönderilir.Her iki olay aşamasında da olay işleyicileri kaydedebilirsiniz.
+                </li>
+                <li>
+                    True yakalama aşaması için olay işleyicisini kaydedin.
+                </li>
+                <li>
+                    false Kabarcıklanma everi için olay işleyicisini kaydedin
+                </li>
+                <p id="result1"></p>
+                <button type="button" id="Btn1" class="btn btn-dark">Click</button>
+                <div class="change1" id="Div1">
+                    <p id="p1">Ben kabarcıklanma olayıyım</p>
+                </div>
+                <div class="change1" id="Div2">
+                    <p id="p2">Ben yakalama olayıyım</p>
+                </div>
+            </article>
+        </section>
+        <section class="change">
+            <article>
+                <header class="header_alt">
+                    <h1>JS Ders 96 removeEventListener</h1>
+                </header>
+                <h3>HTML DOM removeEventListener</h3>
+                <li>
+                    Event Bubbling or Event Capturing?(Olay kabarcıklanma veya olay yakalama?)
+                </li>
+                <li>
+                    HTML DOM'da kababrcıklanma ve yakalama işlemlerinde iki tür olay yayılımı vardır.
+                </li>
+                <li>
+                    Olay yayılımı, bir olay oluştuğunda öğe sırasını tanımlamanın bir yoludur.Bir (div) öğesinde bir (p) öğesi
+                    varsa ve kullanıcı (p) öğesine tıklarsa, hangi öğenin "tıklama" olayının öncelikle ele alınması gerekir?
+                </li>
+                <li>
+                    Kabarcıklanma sırasında iç öğenin olayı önce işlenir ve daha sonra dış öğe işlenir:(p)öğesinin
+                    tıklama olayı önce işlenir, ardından (div) öğesinin tıklama olayı işlenir.
+                </li>
+                <li>
+                    Öğenin yakalanmasında öncelikle (div) öğesinin tıklama olayı işlenir, ardından (p) öğesinin tıklama olayı ele alınır.
+                </li>
+                <li>
+                    addEventListener() metodu ile "useCapture" parametresini kullanarak yayılım türünü belirleye bilrisnizi
+                </li>
+                <li>
+                    Varsayılan değer, kabarcıklanma yayılımını kullanacak false'dur
+                </li>
+                <li>
+                    removeEventListener() metodu, addEventListener() metodu ile eklenen olay işleyicilerini kaldırır.
+                </li>
                 
+                <div id="remove" class="alert alert-danger">HTML DOM Remove EventListener</div>
+                <p id="paragraf"></p>
+                <button type="button" id="btn01" class="btn btn-dark">Click</button>
+
             </article>
         </section>
     </div>
