@@ -3896,7 +3896,203 @@
                 <div id="remove" class="alert alert-danger">HTML DOM Remove EventListener</div>
                 <p id="paragraf"></p>
                 <button type="button" id="btn01" class="btn btn-dark">Click</button>
-
+            </article>
+        </section>
+        <section class="change">
+            <article>
+                <header class="header_alt">
+                    <h1>JS Ders 97 HTML DOM Nodes Mantığı</h1>
+                </header>
+                <h3>Javacript HTML DOM Navigation</h3>
+                <li>
+                    HTML DOM ile, düğüm ilişkilerini kullanarak düğüm ağacında gezinebilirisiniz.
+                </li>
+                <li>
+                    W3C HTML DOM standardına göre, bir HTML belgesindeki her şey bir düğümdür:<br>
+                    -Tüm belge bir belge düğümüdür<br>
+                    -Her HTML öğesi bir öğe düğümüdür<br>
+                    -HTML öğelerindeki metin, metin düğümüdür<br>
+                    -Her HTML özniteliği bir özellik düğümüdür(kullanımdan kaldırılmıştır)<br>
+                    -Tüm yorumlar açıklama düğümleridir
+                </li>
+                <li>
+                    HTML DOM ile, düğüm ağacındaki tüm düğümlere Javacript ile erişilebilir.
+                </li>
+                <li>
+                    Yeni düğümler oluşturabilir ve tüm düğümler değiştirilebilir veya silinebilir.
+                </li>
+                <h3>
+                    Node Relationships
+                </h3>
+                <li>
+                    Düğüm ağacındaki düğümler birbiriyle hiyerarşik bir ilişki içeriyor.
+                </li>
+                <li>
+                    İlişkileri tanımlamak için ebeveyn, çocuk ve kardeş (parent, child, and sibling) terimleri kullanılır.
+                </li>
+                <li>
+                    Bir düğüm ağacında, en üst düğüme kök düğüm denir
+                </li>
+                <li>
+                    Her düğümün hiçbir üst öğesi olamayan kök düğüm hariç tam olarak bir üst düğümü vardır.
+                </li>
+                <li>
+                    Bir düğüm birkaç çocuk (child) sahibi olabilir
+                </li>
+                <li>
+                    Kardeş(siblings) aynı ebeveyne sahip düğümlerdir
+                </li>
+                <img src="resimler/kardeş kodları.PNG"/>
+            </article>
+        </section>
+        <section class="change">
+            <article>
+                <header class="header_alt">
+                    <h1>JS Ders 98 HTML DOM Düğümlerini Javascript ile Kullanmak</h1>
+                </header>
+                <h3>Düğümler Arasında Gezinme</h3>
+                <li>
+                    Javacript ile düğümler arasında gezinmek için 
+                    aşağıdaki düğüm özelliklerini kullanabilirsiniz.<br>
+                     -prentNode<br>
+                     -childNodes[nodenumber]<br>
+                     -firstChild<br>
+                     -lastChild<br>
+                     -nextSibling<br>
+                     -previousSibling
+                </li>
+                <h3>
+                    Child Nodes and Node Values           
+                </h3>
+                <li>
+                    UYARI!! DOM işlemesinde genel bir hata, bir element düğümünün metin içermesini beklemektir.
+                    (title) çğe düğümü (Yukarıdaki örnekte) metin içermiyor. "DOM tutorial"
+                    değerlerine sahip bir metin düğümü içeriyor.
+                </li>
+                <li>
+                    Tam belgeye erişime izin veren iki özel özellik vardır:<br>
+                     -document.body - Dökümanının gövdesi <br>
+                     -document.documentElement - Tam belge
+                </li>
+                <h3>
+                    The nodeName Property
+                </h3>
+                <li>
+                    NodeName özelliği, bir düğümün adını belirtir
+                </li>
+                <li>
+                     nodeName salt okunur niteliktedir.
+                     bir öğe düğümünün nodeName öğesi, etiket adıyla aynı nodeName bir öznitelik düğümünün
+                     öznitelik adıdır Bir metin düğümünün nodeName her zaman #text olursa
+                     Belge düğümünün nodeName her zaman #document
+                </li>
+                <li>
+                    nodeName her zaman bir HTML öğesinin adını büyük harflerle verir
+                </li>
+                <li>
+                    NodeValue özelliği, bir düğümün değerini belirtir.
+                </li>
+                <li>
+                    elemana düğümleri için nodeValue tanımsız
+                </li>
+                <li>
+                    metin düğümleri için nodeValue , özellik değeridir.
+                </li>
+                <li>
+                    NodeType özelliği salt okunur.Bir düğümün türünü döndürür.
+                </li>
+                <p>
+                    ELEMENT_NODE 1<br>
+                    ATTRIBUTE_NODE 2<br>
+                    TEXT_NODE 3<br>
+                    COMMENT_NODE 8<br>
+                    DOCUMENT_NODE 9<br>
+                    DOCUMENT_TYPE_NODE 10
+                </p>
+                <li>
+                    Tür 2 HTML DOM'da kullanımından kaldırılmıştır (ancak çalışır). XML DOM'da ise kullanımdan kaldırılmamıştır.
+                </li>
+            </article>
+        </section>
+        <section class="change">
+            <article>
+                <header class="header_alt">
+                    <h1>JS Ders 99 Düğümler Arası Gezinme</h1>
+                </header>
+                <h3>HTML DOM Elements (Nodes)</h3>
+                <li>
+                    HTML DOM'a yeni bir öğe eklemek için öncelikle öğeyi (öğe düğümünü) oluşturup mevcut bir öğeye eklemelisiniz.
+                </li>
+                <li>
+                    appendChild() metodu, yeni elementi üst elementin son çocuğu olarak ekledi. Bunu istemiyorsanız,
+                    insertBefore() metodunu kullanabilirisiniz.
+                </li>
+                <li>
+                    Bir HTML öğesini kaldırmak için öğenin üst öğesini bilmeniz gerekir
+                </li>
+                <li>
+                    node.remove() metodu DOM4 belitiminde uygulanır.Fakat zayıf tarayıcı desteği yüzünden bunu kullanamaz
+                </li>
+                <li>
+                    Elemanı ebeveynini bulmada bir öğeyi kaldırmak güzel olurdu. Ama maalesef. DOM hem kaldırmak istediğniz
+                    öğeyi hem de üst öğesini bilmedir.
+                </li>
+                <li>
+                    İşte ortak bir geçici çözüm: Kaldırmak istediğiniz çocuğu bulun ve üst öğeyi bulmak için parentNode özelliğini kullanın
+                </li>
+                <li>
+                    Bir elementi HTML DOM'la değiştirmek için replaceChild () metodunu kullanın
+                </li>
+            </article>
+        </section>
+        <section class="change">
+            <article>
+                <header class="header_alt">
+                    <h1>JS Ders 99 Düğümler Arası Gezinme</h1>
+                </header>
+                <h3>HTML DOM Elements (Nodes)</h3>
+                
+                <li>
+                    Elemanı ebeveynini bulmada bir öğeyi kaldırmak güzel olurdu. Ama maalesef. DOM hem kaldırmak istediğniz
+                    öğeyi hem de üst öğesini bilmedir.
+                </li>
+                <li>
+                    İşte ortak bir geçici çözüm: Kaldırmak istediğiniz çocuğu bulun ve üst öğeyi bulmak için parentNode özelliğini kullanın
+                </li>
+                <li>
+                    Bir elementi HTML DOM'la değiştirmek için replaceChild () metodunu kullanın
+                </li>
+            </article>
+        </section>
+        <section class="change">
+            <article>
+                <header class="header_alt">
+                    <h1>JS Ders 101 Gizle Göster Uygulaması</h1>
+                </header>
+                <div class="conteiner-fluid mt-3">
+                    <p id="open"><input type="text" class="form-control"> </p>
+                    <a href="#" onclick="javascript:hideShow()" class="page-link">Göster / Gizle</a>
+                </div>
+            </article>
+        </section>
+        <section class="change">
+            <article>
+                <header class="header_alt">
+                    <h1>JS Ders 102 Buton yakalama oyunu</h1>
+                </header>
+                <div class="conteiner-fluid mt-3">
+               <button type="button" id="btncatch"></button>
+                </div>
+            </article>
+        </section>
+        <section class="change">
+            <article>
+                <header class="header_alt">
+                    <h1>JS Ders 102 Buton yakalama oyunu</h1>
+                </header>
+                <div class="conteiner-fluid mt-3">
+               <button type="button" id="btncatch"></button>
+                </div>
             </article>
         </section>
     </div>
@@ -3909,6 +4105,14 @@
 
         td {
             text-align: center;
+        }
+        
+        #btncatch{
+            width: 110px;
+            height: 110px;
+            position: absolute;
+            background: #720d0f;
+            border: none;
         }
     </style>
     <script src="message.js"></script>

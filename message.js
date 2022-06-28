@@ -222,3 +222,38 @@ var btn01 = document.querySelector("#btn01");
 btn01.onclick = function () {
   remove.removeEventListener("mousemove", rastgele);
 };
+
+//Göster gizle Js
+
+function hideShow() {
+  var getElement = document.querySelector("#open");
+  if (getElement.style.display == "none") {
+    getElement.style.display = "block";
+  } else {
+    getElement.style.display = "none";
+  }
+}
+
+//Buton yakalama oyunu JS kodları
+
+var counter = 0,
+  btncatch,
+  xpos,
+  ypos;
+
+btncatch = document.querySelector("#btncatch");
+btncatch.onmouseover = function () {
+  counter++;
+  xpos = parseInt(Math.random() * 1000);
+  ypos = parseInt(Math.random() * 700);
+  btncatch.style.left = xpos + "px";
+  btncatch.style.top = ypos + "px";
+  btncatch.style.width = this.clientWidth + 10 + "px";
+  btncatch.style.height = this.clientWidth + 10 + "px";
+};
+btncatch.onclick = function () {
+  alert(counter + ". seferde yakaladın");
+  btncatch.style.width = "110px";
+  btncatch.style.height = "110px";
+  counter = 0;
+};
