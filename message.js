@@ -257,3 +257,47 @@ btncatch.onclick = function () {
   btncatch.style.height = "110px";
   counter = 0;
 };
+
+//Sayfayı süreli yönlendirme uygulaması
+
+// go("#yon", "https://google.com", 3);
+// function go(ID, Address, second) {
+//   if (second === 0) {
+//     window.location.href = Address;
+//   }
+//   document.querySelector(ID).textContent =
+//     second + "saniye sonra yönlendirileceksiniz;";
+//   second--;
+//   setTimeout(function () {
+//     go(ID, Address, second);
+//   }, 1000);
+// }
+
+//Select ve checkbox işlemleri
+
+var Check = document.querySelector("#Check");
+var getIndex = document.querySelector("#city");
+Check.addEventListener("click", function () {
+  var valueSelected = getIndex.options[getIndex.selectedIndex].value;
+  alert(valueSelected);
+});
+
+//karakter sınırlama uygulaması
+
+var message,
+  paraagraf,
+  chracter = 150,
+  chracterLength;
+message = document.querySelector("#message");
+paraagraf = document.querySelector("#paraagraf");
+message.onkeydown = chracterControl;
+message.onkeyup = chracterControl;
+function chracterControl() {
+  chracterLength = this.value.length;
+  if (chracter >= chracterLength) {
+    var lastLength = chracter - chracterLength;
+    paraagraf.textContent = lastLength + " karakter kaldı";
+  } else {
+    this.value = this.value.substr(0, chracter);
+  }
+}
